@@ -1,1 +1,1 @@
-# Capstone II - Web Application with ELK Stack
+# Trinity - Web Application with ELK Stack
