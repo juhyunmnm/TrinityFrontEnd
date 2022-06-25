@@ -17,7 +17,7 @@ public class BoardController {
         this.boardRepository = boardRepository;
     }
 
-    @GetMapping("/findall")
+    @GetMapping("/boards")
     public List<Board> findAll() {
         return boardRepository.findAll();
     }
