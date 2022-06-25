@@ -3,6 +3,7 @@ package com.capstone.mint.entity;
 import lombok.*;
 
 import javax.persistence.*;
+import java.time.LocalDateTime;
 
 @Entity
 @Table (name = "board")
@@ -13,7 +14,6 @@ public class Board {
 
     @Id // Primary Key
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column (name = "board_id")
     private Long board_id;
 
     @Column (name = "board_writer")
@@ -26,12 +26,12 @@ public class Board {
     private String board_content;
 
     @Column (name = "board_regdate")
-    private String board_regdate;
+    private LocalDateTime board_regdate;
 
-    @Column (name = "board_updatedate")
-    private String board_updatedate;
+    @Column (name = "board_updatedate", nullable = true)
+    private LocalDateTime board_updatedate;
 
-    @Column (name = "board_deletedate")
-    private String board_deletedate;
+    @Column (name = "board_deletedate", nullable = true)
+    private LocalDateTime board_deletedate;
 
 }
