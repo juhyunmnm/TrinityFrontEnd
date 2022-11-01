@@ -18,4 +18,8 @@ spring:
         format_sql: true
 
 server:
+<<<<<<< HEAD
   port: 8080
+=======
+  port: 8081
+>>>>>>> ba4d2b82c7ef9ce426a65f714e74eb560250399a
