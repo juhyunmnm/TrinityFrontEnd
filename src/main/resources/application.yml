@@ -8,8 +8,14 @@ spring:
     properties:
       hibernate:
         dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+        ddl-auto : update
     show_sql: true
+    generate-ddl: true
   session:
     store-type: jdbc
   profiles:
     include: real-oauth
+  datasource:
+    url: jdbc:mariadb://trinitydb.cpyoritr64dk.ap-northeast-2.rds.amazonaws.com:3306/TrinityDB
+    username: root
+    password: mint1234
