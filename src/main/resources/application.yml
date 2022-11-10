@@ -1,6 +1,6 @@
 spring:
   profiles:
-    include: real
+    include: db
   main:
     allow-bean-definition-overriding: true
   h2:
