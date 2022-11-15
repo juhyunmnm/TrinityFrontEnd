@@ -1,6 +1,4 @@
 spring:
-  profiles:
-    include: db
   main:
     allow-bean-definition-overriding: true
   h2:
@@ -10,8 +8,18 @@ spring:
     properties:
       hibernate:
         dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+    hibernate:
+      ddl-auto: none
     show_sql: true
-  session:
-    store-type: jdbc
+  datasource:
+    url: jdbc:mariadb://trinitydb.cpyoritr64dk.ap-northeast-2.rds.amazonaws.com:3306/TrinityDB
+    username: root
+    password: mint1234
+    driver-class-name: org.mariadb.jdbc.Driver
+jwt:
+  # capstone-mint-candy-trinity-jwt-secret-key
+  # capstone-mint-candy-trinity-jwt-secret-key -> BASE64 인코딩
+  secret: Y2Fwc3RvbmUtbWludC1jYW5keS10cmluaXR5LWp3dC1zZWNyZXQta2V5CmNhcHN0b25lLW1pbnQtY2FuZHktdHJpbml0eS1qd3Qtc2VjcmV0LWtleQ==
+
 
 
