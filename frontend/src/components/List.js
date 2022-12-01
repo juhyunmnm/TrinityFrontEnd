@@ -1,8 +1,34 @@
 import React, { Fragment } from "react";
 import { Route, Routes } from "react-router-dom";
-import Qna from "./Qna";
+import axios from "axios";
+import Write from "./Write";
 
 function List(){
+/*
+  const [posts, setPosts] = useState([]);
+  const [loading, setLoading] = useState(false);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [postsPerPage, setPostsPerPage] = useState(10);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      setLoading(true);
+      const response = await axios.get(
+        "https://jsonplaceholder.typicode.com/posts"
+      );
+      /* axios.get() 안에 url은 블로그에 올라온 테스트용 db 데이터
+      
+      setPosts(response.data);
+      setLoading(false);
+    };
+    fetchData();
+  }, []);
+
+  console.log(posts);
+  */
+ 
+  /*여기부터 폼*/
+
      return<Fragment>
         <link rel="stylesheet" href="/webjars/bootstrap/4.5.0/css/bootstrap.min.css" />
 
@@ -38,7 +64,7 @@ function List(){
       <div class="row">
         <div class="col-auto mr-auto"></div>
         <div class="col-auto">
-          <a class="btn btn-primary" thHref="@{/post}"  role="button" style={{color:'white'}}>등록</a>
+          <a class="btn btn-primary" thHref="@{/post}"  role="button" href="/write" style={{color:'white'}}>등록</a>
         </div>
       </div>
     </div>
@@ -46,7 +72,7 @@ function List(){
     <script src="/webjars/bootstrap/4.5.0/js/bootstrap.min.js"></script>
     
     <Routes>
-        <Route path="/registerBtn" element={<Qna/>}/>
+        <Route path="/write" element={<Write/>}/>
     </Routes>
 
      </Fragment>
