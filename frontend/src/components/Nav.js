@@ -9,7 +9,6 @@ import Reg from "./Register";
 import List from "./List";
 import Write from "./Write";
 
-
 function Nav(){
     return <>
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css"/>
@@ -47,6 +46,10 @@ function Nav(){
                     <li class="nav-item" style={{paddingRight:'30px'}}>
                         <a class="nav-link" href="/list" >QnA 목록</a>
                     </li>
+                    <li class="nav-item" style={{paddingRight:'30px'}}>
+                        <a class="nav-link" href="/read" >Test Read Page</a>
+                    </li>
+                    
                     
                     <li class="nav-item dropdown" style={{paddingRight:'30px'}}>
                         <a class="nav-link dropdown-toggle" href="/register"  data-bs-toggle="dropdown" aria-expanded="false">회원가입</a>
@@ -84,6 +87,8 @@ function Nav(){
 
     <Route path="/list" element={<List/>}/>
     <Route path="/write" element={<Write/>}/>
+
+
     </Routes></>
 
 }

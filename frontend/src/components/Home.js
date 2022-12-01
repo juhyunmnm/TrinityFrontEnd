@@ -3,11 +3,13 @@ import Header from "./Header";
 import Nav from "./Nav";
 
 
+
 function Home() {
     return (
-      <h2>test</h2>
+      <hr></hr>
     );
   }
-  
+ 
+
   export default Home;
   
